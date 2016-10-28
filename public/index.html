@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html  lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="Flex App" content="">
+    <meta name="Daniel Gallardo, Mariel Ponce, Jose Garza, Ana RM" content="">
+    <link rel="icon" href="img/favicon.ico">
+    <title>Flex America</title>
+
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    
+
+
+</head>
+
+<body ng-app="routerApp" style="background-color:#CDCDCD;">
+    <!-- CONTENEDOR ABSOLUTO DE LA PAGINA -->
+    <div id="wrapper">
+
+        <!-- INICIO SIDEBAR -->
+        <div id="sidebar-wrapper">
+        <a id="logo" href="#/home"></a>    
+            <ul class="sidebar-nav">                     
+                <li>
+                    <a href="#/register" class="btn" style="background-color:#00AEF5;"><b>Registro de <p style ="margin-top:-5px;">usuarios</p></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="#/users" class="btn"  style="background-color:#00AEF5;"><b>Administracion de<p style ="margin-top:-5px;"> Usuarios</p></b></a>
+                </li>                          
+            </ul>
+        </div>
+        <!-- FIN DE LA SIDEBAR COLAPSABLE -->
+
+        <!-- CONTENIDO DE LA PAGINA -->
+        <div class="row">   
+            <div class="col-lg-12">
+                <div class="contorno">
+                <!-- AQUI NO SE ESCRIBE NADA -->                     
+                <div class="row hidden-md hidden-lg hidden-sm">
+                <!-- AQUI NO SE ESCRIBE NADA -->                     
+                <div class="col-sm-2 col-xs-2 hidden-lg hidden-md">
+                <!-- AQUI NO SE ESCRIBE NADA -->                     
+                </div>
+                <div class="col-sm-4 col-xs-4 hidden-lg hidden-md" >
+                <!-- AQUI NO SE ESCRIBE NADA -->                     
+                <a href="#/home">
+                    <img src="img/logomovil.jpg"  class="btn">
+                    </a>
+                </div>
+                <div class="col-sm-4 col-xs-4 hidden-lg hidden-md" >
+                <!-- AQUI NO SE ESCRIBE NADA -->                     
+                </div>
+                </div>
+                <!-- AQUI NO SE ESCRIBE NADA -->                     
+                </div>
+            </div>
+        </div> 
+
+        <div id="page-content-wrapper">            
+            <div class="container-fluid">
+                                    
+                <div ui-view class="row">
+
+                 </div>
+            </div>
+        </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+<script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+
+</html>
+    

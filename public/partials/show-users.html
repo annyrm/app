@@ -1,0 +1,58 @@
+<div class="container-notinitial">
+	<div class="container-fluid" style="border: 2px solid black; width:80%;max-height:620px; padding-top:20px;padding-bottom:20px; overflow:auto; min-height:200px;">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="row">
+			<div class="col-lg-11 col-md-11 col-sm-8 col-xs-8" >
+			<h1 style="text-align:center;">Usuarios Registrados</h1>
+			</div>
+			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+				<a class="btn btn-default" href="#/home" style="padding-right:">
+  					<span class="glyphicon glyphicon-remove" ></span>
+				</a>
+			</div>
+		</div>	
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+			<style>th, td {
+    			border: 1px solid black;
+    			border-collapse: collapse;
+    			padding: 4px;
+    			width:100%; 
+    			}	
+			</style>
+				<table style="display:block; max-height:400px; overflow-y: auto;">
+ 				 	<tr>
+					    <th >Apellidos</th>
+					    <th colspan="2">Nombres</th> 
+					    <th colspan="2">Area de trabajo</th>
+					    <th colspan="2">Posicion</th>
+					    <th colspan="2">Nomina</th> 
+					    <th colspan="2">Eliminar</th>
+				  	</tr>
+				  	
+				  	<tr ng-repeat="users in users">
+					    <td colspan="2">{{users.lname}}</td>
+					    <td colspan="2">{{users.name}}</td> 
+					    <td colspan="2">{{users.workarea}}</td>
+						<td colspan="2">{{users.role}}</td>
+					    <td colspan="2">{{users.payment}}</td> 
+					    <td>				
+						    <button type="button" class="btn btn-danger" style="width:100%;" aria-label="Left Align">
+	  							<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+							</button>
+						</td>
+				  	</tr>
+				</table>
+			</div>
+			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">				
+			</div>
+			<div class="row" style="margin-bottom:400px;">
+			<div class="col-sm-12 col-xs-12">
+			<button type="button" class="btn btn-primary" style="width:100%;margin-top:5px;margin-left:;" aria-label="Left Align">
+	  			<span class="glyphicon glyphicon-print" aria-hidden="true"> Imprimir</span>
+			</button>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
