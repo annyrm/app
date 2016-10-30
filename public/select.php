@@ -1,12 +1,20 @@
 <?php
-include "conectar_db.php";
+//database settings
+$server="localhost";
+$username="root";
+$pass="";
+$db="flexapp";
 
-$query = "SELECT * FROM usuarios";
-$rs=$dbhandle->query($query);
+$mysqli = new mysqli($server, $username, $pass, $db);
 
-while($row=$rs->fetch_assoc()){
-$data[]=$row;
+$respuesta = array();
+if($result = $mysqli->query("SELECT * FROM usuarios")){
+    while ($row = $result->fetch_array(MYSQLI_ASSOC)){
+        $respuesta[] = $row;
+    }
+    echo json_encode(array("resultado"=>$respuesta));
 }
 
-print json_encode($data);
+$result->close();
+$mysqli->close();
 ?>
